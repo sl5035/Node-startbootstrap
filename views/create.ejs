@@ -13,7 +13,6 @@
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="page-heading">
               <h1>Create New Post</h1>
-              <span class="subheading">Have questions? I have answers.</span>
             </div>
           </div>
         </div>
@@ -33,7 +32,11 @@
               <!-- To make this form functional, sign up at-->
               <!-- https://startbootstrap.com/solution/contact-forms-->
               <!-- to get an API token!-->
-              <form action="/posts/store" method="post">
+              <form
+                action="/posts/store"
+                method="post"
+                enctype="multipart/form-data"
+              >
                 <div class="control-group">
                   <div class="form-group floating-label-form-group controls">
                     <label>Title</label>
@@ -55,6 +58,17 @@
                       id="body"
                       name="body"
                     ></textarea>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <div class="form-group floating-label-form-group controls">
+                    <label>Image</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="image"
+                      name="image"
+                    />
                   </div>
                 </div>
                 <br />
