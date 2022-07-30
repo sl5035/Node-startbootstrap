@@ -3,6 +3,7 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const expressSession = require("express-session");
 
 const newPostController = require("./controllers/newPost");
 const homeController = require("./controllers/home");
@@ -29,6 +30,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 
 app.use("/posts/store", validateMiddleWare);
+
+app.use(
+  expressSession({
+    secret: "keyboard cat",
+  })
+);
 
 app.listen(4000, () => {
   console.log("App listening on port 4000");
