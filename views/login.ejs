@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("layout/header.ejs") -%>
+  <body>
+    <%- include("layout/navbar.ejs") -%>
+    <!-- Page Header-->
+    <header
+      class="masthead"
+      style="background-image: url('/assets/img/contact-bg.jpg')"
+    >
+      <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <div class="page-heading">
+              <h1>Login</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+            <p>Login!</p>
+            <div class="my-5">
+              <!-- * * * * * * * * * * * * * * *-->
+              <!-- * * * * * Body Form * * * * *-->
+              <!-- * * * * * * * * * * * * * * *-->
+              <!-- This form is pre-integrated with SB Forms.-->
+              <!-- To make this form functional, sign up at-->
+              <!-- https://startbootstrap.com/solution/contact-forms-->
+              <!-- to get an API token!-->
+              <form
+                action="/users/login"
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <div class="control-group">
+                  <div class="form-group floating-label-form-group controls">
+                    <label>User Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="User Name"
+                      id="username"
+                      name="username"
+                    />
+                  </div>
+                </div>
+                <div class="control-group">
+                  <div class="form-group floating-label-form-group controls">
+                    <label>Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      id="password"
+                      name="password"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="form-group">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="registerButton"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include("layout/footer.ejs") -%> <%- include("layout/script.ejs") -%>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+  </body>
+</html>
