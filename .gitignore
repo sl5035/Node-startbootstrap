@@ -1,0 +1,6 @@
+# Folders
+node_modules/
+assets/
+
+# Files
+package-lock.json
