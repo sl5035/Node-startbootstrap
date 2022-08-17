@@ -21,7 +21,7 @@ const authMiddleWare = require("./middleware/authMiddleWare");
 const redirectIfAuthenticatedMiddleWare = require("./middleware/redirectIfAuthenticatedMiddleWare");
 
 mongoose.connect(
-  "mongodb+srv://Admin:robin0302@cluster0.4tolf3l.mongodb.net/test",
+  "mongodb+srv://Admin:SECRET_API.mongodb.net/test",
   { useNewUrlParser: true }
 );
 
